@@ -8,7 +8,7 @@ import (
 )
 
 func main() {
-	listAnagrams("bananagrams")
+	listAnagrams("imaginedragons")
 }
 
 func contains (s []string, str string) (b bool){
@@ -60,8 +60,10 @@ func listAnagrams(x string) {
 				continue
 			}
 			repeatedLetters = append(repeatedLetters, s[i])
-			numberOfLetters = numberOfLetters - (strings.Count(x, s[i]))
 		}
+	}
+	if numberOfLetters >= 8 {
+		numberOfLetters = 7
 	}
 
 	anagrams := []string {x}
