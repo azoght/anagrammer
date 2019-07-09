@@ -8,7 +8,7 @@ import (
 )
 
 func main() {
-	listAnagrams("imaginedragons")
+	listAnagrams("helloworld")
 }
 
 func contains (s []string, str string) (b bool){
