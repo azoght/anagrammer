@@ -4,6 +4,7 @@ import (
 	"errors"
 	"fmt"
 	"math/rand"
+	"sort"
 	"strings"
 )
 
@@ -93,6 +94,10 @@ func listAnagrams(x string) {
 			break
 		}
 	}
+
+	sort.Strings(anagrams)
+
+	fmt.Println("Generated from", x + ":")
 	for anagram := range anagrams {
 		fmt.Println(anagrams[anagram])
 	}
